@@ -1,10 +1,12 @@
-
-console.log(process.env.NODE_ENV);
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-console.log(process.env.NODE_ENV);
 
+var mongoose = require('./config/mongoose'); // must be loaded before any other configuration
 var express = require('./config/express');
+var passport = require('./config/passport');
+
+var db = mongoose();
 var app = express();
+var passport = passport();
 
 app.listen(3000);
 
