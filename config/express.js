@@ -1,11 +1,12 @@
-var config = require('./config'),
-  express = require('express'),
-  morgan = require('morgan'),
-  compress = require('compression'),
-  bodyParser = require('body-parser'),
-  methodOverride = require('method-override'),
-  session = require('express-session'),
-  passport = require('passport');
+var config = require('./config');
+var express = require('express');
+var morgan = require('morgan');
+var compress = require('compression');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var session = require('express-session');
+var flash = require('connect-flash');
+var passport = require('passport');
 
 module.exports = function() {
   var app = express();
@@ -31,6 +32,7 @@ module.exports = function() {
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
 
+  app.use(flash());
   app.use(passport.initialize());
   app.use(passport.session());
 
