@@ -1,3 +1,4 @@
 # Node, NPM, Bower
 node_modules/
 bower_components/
+public/lib/
