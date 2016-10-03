@@ -10,6 +10,12 @@ module.exports = function() {
       if (err) {
         return done(err);
       }
+      if (user && user.provider !== 'local') {
+        return done(null, false, {
+          message: 'This user registered with ' + user.provider +
+                   '. \n Please use appropriate signin option!'
+        });
+      }
       if (!user) {
         return done(null, false, {
           message: 'Unknown user'
