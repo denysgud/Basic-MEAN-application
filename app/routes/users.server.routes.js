@@ -1,7 +1,7 @@
 var users = require('../../app/controllers/users.server.controller');
 var passport = require('passport');
 
-module.exports = function(app) {
+/* module.exports = function(app) {
   app.route('/users')
     .post(users.create)
     .get(users.list);
@@ -12,7 +12,7 @@ module.exports = function(app) {
     .delete(users.delete);
 
   app.param('userId', users.userByID);
-};
+};*/
 
 module.exports = function(app) {
   app.route('/signup')
