@@ -1,5 +1,6 @@
 module.exports = {
-  db: 'mongodb://localhost/testDB',
+  // db: 'mongodb://localhost/testDB',
+  db: 'mongodb://admin:password@ds033096.mlab.com:33096/basic_mean_app',
   sessionSecret: 'developmentSessionSecret',
   facebook: {
     clientID: '545155692340221',
