@@ -17,6 +17,9 @@
     "url": "https://github.com/denysgud/Basic-MEAN-application/issues"
   },
   "homepage": "https://github.com/denysgud/Basic-MEAN-application#readme",
+  "engines": {
+    "node": "4.4.4"
+  },
   "dependencies": {
     "body-parser": "~1.8.0",
     "compression": "~1.0.11",
